@@ -10,4 +10,23 @@ We propose a stagewise, systematic methodology in this study: First, we retrain 
 
 Compared to other proposed bone-suppression models, the ResNet-BS model demonstrated superior performance with the least combined loss (0.0167) and higher values for peak signal-to-noise ratio (PSNR) (34.0678), structural similarity index measure (SSIM) (0.9492), and multi-scale structural similarity index measure (MS-SSIM) (0.9828; 95% confidence interval (CI): (0.9022, 1.0)) metrics. However, these values are not statistically significantly different (p > 0.05) across the models. For the classification task, we observed that the bone-suppressed models demonstrated superior values for accuracy (0.95±0.0420), the area under the curve (AUC) (0.9611±0.0440), specificity (1.00), precision (1.00), F-measure (0.9307±0.0615), and MCC (0.9000±0.0842) using the hold-out test data compared to the models trained on the baseline, non-bone-suppressed Montgomery TB dataset. However, no statistically significant difference is observed between the MCC values obtained by the non-bone-suppressed and bone-suppressed models (F(1, 6) = 0.209, p = 0.664). The average AUC obtained by the bone-suppressed models (AUCavg = 0.9500) is superior compared to that obtained by the non-bone-suppressed models (AUCavg = 0.9325). The detection of TB-consistent findings in CXRs improved using the bone-suppressed images, signifying that bone suppression improved the sensitivity of the models toward TB detection and localization.
 
+An important contribution of this study is that the models proposed are not limited to bone suppression toward improving TB detection but can potentially be extended to other applications such as improving performance in detecting lung nodules, pneumonia, and COVID-19. With recent advancements in cloud technology, the trained models could be deployed in the cloud for public use and can be implemented in mobile devices.
+
 ## What is included?
+The Jupyter notebook containing all codes to reproduce this study. It contains:
+
+(i) Steps to train CXR-modality-specific models
+
+(ii) Fine-tune the CXR-modality-specific model for the TB detection task
+
+(iii) Visualize t-SNE embedding with the fine-tuned model
+
+(iv) Generate CRM visualizations with the fine-tuned model
+
+(v) Train bone-suppression models on the original and bone suppressed counterparts
+
+(vi) Predict bone-suppressed Montgomery CXRs using the trained model.
+
+We have also included the best-performing ResNet-BS bone suppression model for direct use. Run the model on 256 x 256 grayscale CXR image to geneate a soft-tissue image with suppressed bone shadows. 
+
+
