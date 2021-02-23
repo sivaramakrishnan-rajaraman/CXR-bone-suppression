@@ -2,9 +2,9 @@
 
 Chest X-rays (CXRs) are the most commonly performed diagnostic examination to detect lung-related abnormalities and other complications related to these conditions. However, its use to detect subtle abnormalities is constrained by the presence of bony structures including the ribs and clavicles that obscure these abnormalities and render them undetected. This study aims to build deep learning (DL)-based bone-suppression model that identifies and removes the superimposing bony structures in CXRs to facilitate reducing errors in radiological interpretation related to detecting Tuberculosis (TB)-consistent findings.
 
-LR Image                   |  SISR Image
-:-------------------------:|:-------------------------:
-![Alt-Text](scaled_LR_image1.png)  |  ![Alt-Text](predicted_img.png)
+                                                   Original image             |  Bone-suppressed image
+                                                   :-------------------------:|:-------------------------:
+                                            ![Alt-Text](image027_source.png)  |  ![Alt-Text](image027_pred.png)
 
 We propose a stagewise, systematic methodology in this study: First, we retrain an ImageNet-trained VGG-16 model on a large-scale, diverse, combined selection of publicly available CXRs to help it learn CXR modality-specific features. The learned knowledge is transferred to improve performance in a related target classification task of classifying CXRs in the publicly available Montgomery TB collection as showing normal lungs or pulmonary TB manifestations. Next, we train several bone-suppression models with varying architecture on the Japanese Society of Radiological Technology (JSRT) CXR dataset and its bone-suppressed counterpart. The performance of the trained models is tested using the cross-institutional National Institutes of Health (NIH) clinical center (CC) dual-energy subtraction (DES) CXR dataset. The best-performing model is used to suppress bones in the Montgomery TB collection. We then compare the performance of the CXR-retrained VGG-16 models trained with the non-bone-suppressed and bone-suppressed Montgomery TB datasets using several performance metrics and analyzed them for a statistically significant difference. The predictions of the non-bone-suppressed and bone-suppressed models are interpreted through class-selective relevance maps (CRM).
 
