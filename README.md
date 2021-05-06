@@ -21,9 +21,9 @@ For the classification task, we observed that the bone-suppressed models demonst
 An important contribution of this study is that the models proposed are not limited to bone suppression toward improving TB detection but can potentially be extended to other applications such as improving performance in detecting lung nodules, pneumonia, and COVID-19. With recent advancements in cloud technology, the trained models could be deployed in the cloud for public use and can be implemented in mobile devices.
 
 ## Bone Suppression Dataset:
-The researchers from the Budapest University of Technology and Economics used their in-house clavicle and rib–shadow removal algorithms to suppress the bones in the 247 JSRT CXRs and made the bone-suppressed soft-tissue images publicly available at https://www.mit.bme.hu/eng/events/2013/04/18/boneshadow-eliminated-images-jsrt-database. The link is currently broken. We have augmented this dataset to create 4000+ original-bone-suppressed image pairs to train bone suppression models. The data is available at https://drive.google.com/drive/folders/1m4hlwglZIK14Mlkjf3YsNHRfXLJlfbBN?usp=sharing. Please cite our study if using these data and codes for your research:
+The researchers from the Budapest University of Technology and Economics used their in-house clavicle and rib–shadow removal algorithms to suppress the bones in the 247 JSRT CXRs and made the bone-suppressed soft-tissue images publicly available at https://www.mit.bme.hu/eng/events/2013/04/18/boneshadow-eliminated-images-jsrt-database. The link is currently broken. We have augmented this dataset to create 4000+ original-bone-suppressed image pairs to train our proposed bone suppression models. The data is available at https://drive.google.com/drive/folders/1m4hlwglZIK14Mlkjf3YsNHRfXLJlfbBN?usp=sharing. Please cite our study if using these data and codes for your research:
 
-## Rajaraman, S.; Zamzmi, G.; Folio, L.; Alderson, P.; and Antani, S. Chest X-Ray Bone Suppression for Improv-ing Classification of Tuberculo-sis-Consistent Findings. Diagnostics 2021, 11, x. https://doi.org/10.3390/xxxxx
+### Rajaraman, S.; Zamzmi, G.; Folio, L.; Alderson, P.; and Antani, S. Chest X-Ray Bone Suppression for Improv-ing Classification of Tuberculo-sis-Consistent Findings. Diagnostics 2021, 11, x. https://doi.org/10.3390/xxxxx
 
 ## What is included?
 The Jupyter notebook containing all codes to reproduce this study. It contains:
@@ -40,6 +40,6 @@ The Jupyter notebook containing all codes to reproduce this study. It contains:
 
 (vi) Predict bone-suppressed Montgomery CXRs using the trained model.
 
-We have also included the best-performing ResNet-BS bone suppression model for direct use. Run the model on 256 x 256 grayscale CXR image to geneate a soft-tissue image with suppressed bone shadows. 
+We have also included the weights of the best-performing ResNet-BS bone suppression model for direct use. Run the model on 256 x 256 grayscale CXR image to geneate a soft-tissue image with suppressed bone shadows. 
 
 
